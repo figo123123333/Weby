@@ -1,2 +1,2 @@
 # Weby
-Kadeřnický web
+FyzioTerapie Web

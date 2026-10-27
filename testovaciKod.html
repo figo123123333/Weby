@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fyzioterapie Martina Motejzíková</title>
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <style>
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #00b4d8;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: #023e8a;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-top: 0;
+        }
+
+        .hours-table, .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .hours-table th, .hours-table td,
+        .price-table th, .price-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .price-table th, .hours-table th {
+            background-color: #e0f4fc;
+            color: var(--primary-color);
+        }
+
+        .img-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #023e8a;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: var(--white);
+            margin-top: 40px;
+        }
+
+        .highlight {
+            color: #d90429;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Fyzioterapie Martina Motejzíková</h1>
+        <p>Odborná péče pro vaše zdraví, pohyb bez bolesti a rehabilitace</p>
+    </header>
+
+    <nav>
+        <a href="#o-nas">O mně</a>
+        <a href="#sluzby">Služby a Ceník</a>
+        <a href="#oteviraci-doba">Otevírací doba</a>
+        <a href="#kontakt">Kontakt & Adresa</a>
+        <a href="#registrace">Objednání</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="o-nas" class="card">
+            <h2>O ordinaci</h2>
+            <p>Vítám vás na stránkách fyzioterapeutické praxe. Nabízím komplexní diagnostiku a terapii poruch pohybového aparátu, rehabilitaci po úrazech a operacích nebo preventivní péči. Ke každému pacientovi přistupuji individuálně s ohledem na jeho potřeby a cíl.</p>
+            
+            <div class="img-container">
+                <img src="Fyzio.jpg" alt="Ordinace Fyzioterapie Martina Motejzíková">
+            </div>
+        </section>
+
+        <section id="sluzby" class="card">
+            <h2>Ceník poskytovaných služeb</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Služba</th>
+                        <th>Doba trvání</th>
+                        <th>Cena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Vstupní fyzioterapeutické vyšetření a terapie</td>
+                        <td>60 min</td>
+                        <td>900 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Kontrolní fyzioterapie</td>
+                        <td>45 min</td>
+                        <td>700 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Měkké a mobilizační techniky</td>
+                        <td>30 min</td>
+                        <td>500 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Kineziotaping (tejpování - včetně materiálu)</td>
+                        <td>15 min</td>
+                        <td>200 Kč</td>
+                    </tr>
+                    <tr>
+                        <td>Sportovní a regenerační masáž</td>
+                        <td>50 min</td>
+                        <td>800 Kč</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="grid">
+            <section id="oteviraci-doba" class="card">
+                <h2>Otevírací doba</h2>
+                <p class="highlight">Pouze po předchozím objednání!</p>
+                <table class="hours-table">
+                    <tr>
+                        <td><strong>Pondělí</strong></td>
+                        <td>08:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Úterý</strong></td>
+                        <td>10:00 – 18:00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Středa</strong></td>
+                        <td>08:00 – 16:00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Čtvrtek</strong></td>
+                        <td>08:00 – 15:00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pátek</strong></td>
+                        <td>08:00 – 13:00</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sobota – Neděle</strong></td>
+                        <td>Zavřeno</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="kontakt" class="card">
+                <h2>Kde mě najdete</h2>
+                <p><strong>Adresa:</strong><br>
+                Zdravotní středisko Kasejovice 251<br>
+                335 44 Kasejovice</p>
+
+                <p><strong>GPS Souřadnice:</strong><br>
+                49.4638606N, 13.7340753E</p>
+
+                <p><strong>Kontakt:</strong><br>
+                Telefon: +420 736 527 399<br>
+                E-mail: fyziomartinam@gmail.com</p>
+            </section>
+        </div>
+
+        <section id="registrace" class="card">
+            <h2>Online objednání / Registrace pacienta</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Jméno a příjmení:</label>
+                    <input type="text" id="name" name="name" placeholder="Jan Novák" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="jan.novak@email.cz" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonní číslo:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+420 777 888 999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Vyberte požadovanou službu:</label>
+                    <select id="service" name="service">
+                        <option value="vstupni">Vstupní vyšetření (60 min)</option>
+                        <option value="kontrolni">Kontrolní terapie (45 min)</option>
+                        <option value="masaz">Regenerační masáž (50 min)</option>
+                        <option value="tejpovani">Tejpování (15 min)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Heslo pro klientský účet:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <button type="submit">Odeslat objednávku</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Fyzioterapie Martina Motejzíková | Všechna práva vyhrazena</p>
+    </footer>
+
+</body>
+</html>
